@@ -69,17 +69,6 @@ F 3 "~" H 6800 1400 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:D D1
-U 1 1 5F55460C
-P 4300 2650
-F 0 "D1" V 4346 2570 50  0000 R CNN
-F 1 "D" V 4255 2570 50  0000 R CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4300 2650 50  0001 C CNN
-F 3 "~" H 4300 2650 50  0001 C CNN
-	1    4300 2650
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Connector_Generic:Conn_01x06 J11
 U 1 1 5F55518D
 P 4800 3700
@@ -198,27 +187,10 @@ F 3 "~" H 2500 2550 50  0001 C CNN
 	1    2500 2550
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_02x03_Odd_Even J8
-U 1 1 5F5506F5
-P 3800 2250
-F 0 "J8" H 3850 2567 50  0000 C CNN
-F 1 "Conn_02x03_Counter_Clockwise" H 4300 2500 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 3800 2250 50  0001 C CNN
-F 3 "~" H 3800 2250 50  0001 C CNN
-	1    3800 2250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4100 2250 5400 2250
-Wire Wire Line
-	4100 2150 5400 2150
 Wire Wire Line
 	5400 2150 5400 1400
 Wire Wire Line
 	5400 1400 5700 1400
-Wire Wire Line
-	5400 2250 5400 2450
 Wire Wire Line
 	5400 2450 5750 2450
 Wire Wire Line
@@ -227,10 +199,6 @@ Wire Wire Line
 	7100 1400 7100 2000
 Wire Wire Line
 	7100 2450 6950 2450
-Wire Wire Line
-	4100 2350 4300 2350
-Wire Wire Line
-	4300 2350 4300 2500
 Wire Wire Line
 	5750 2950 5750 3050
 Wire Wire Line
@@ -329,9 +297,6 @@ Wire Wire Line
 Connection ~ 4300 3350
 Wire Wire Line
 	4300 3000 4700 3000
-Connection ~ 4300 3000
-Wire Wire Line
-	4300 3000 4300 2800
 Wire Wire Line
 	2850 2550 2700 2550
 $Comp
@@ -498,12 +463,12 @@ Wire Notes Line
 $Comp
 L Device:Fuse F1
 U 1 1 5F64FC82
-P 3200 2250
-F 0 "F1" H 3400 2200 50  0000 R CNN
-F 1 "Fuse" H 3450 2300 50  0000 R CNN
-F 2 "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3130 2250 50  0001 C CNN
-F 3 "~" H 3200 2250 50  0001 C CNN
-	1    3200 2250
+P 3050 2250
+F 0 "F1" H 3250 2200 50  0000 R CNN
+F 1 "Fuse" H 3300 2300 50  0000 R CNN
+F 2 "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2980 2250 50  0001 C CNN
+F 3 "~" H 3050 2250 50  0001 C CNN
+	1    3050 2250
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
@@ -593,10 +558,10 @@ Wire Wire Line
 Wire Wire Line
 	2850 2150 2850 2250
 Wire Wire Line
-	3050 2250 2850 2250
+	2900 2250 2850 2250
 Connection ~ 2850 2250
 Wire Wire Line
-	3350 2250 3550 2250
+	3200 2250 3250 2250
 Wire Wire Line
 	2850 2250 2700 2250
 Wire Wire Line
@@ -607,4 +572,37 @@ Wire Notes Line
 	1900 1700 1900 2950
 Wire Notes Line
 	4100 2950 4100 1700
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J8
+U 1 1 5F5506F5
+P 3800 2250
+F 0 "J8" H 3850 1900 50  0000 C CNN
+F 1 "Conn_02x03_Counter_Clockwise" H 4000 2000 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 3800 2250 50  0001 C CNN
+F 3 "~" H 3800 2250 50  0001 C CNN
+	1    3800 2250
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4100 2150 5400 2150
+Wire Wire Line
+	4100 2250 4300 2250
+Wire Wire Line
+	4100 2350 5400 2350
+Wire Wire Line
+	5400 2350 5400 2450
+$Comp
+L Device:D D1
+U 1 1 5F55460C
+P 3400 2250
+F 0 "D1" V 3446 2170 50  0000 R CNN
+F 1 "D" V 3355 2170 50  0000 R CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3400 2250 50  0001 C CNN
+F 3 "~" H 3400 2250 50  0001 C CNN
+	1    3400 2250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4300 2250 4300 3000
+Connection ~ 4300 3000
 $EndSCHEMATC
